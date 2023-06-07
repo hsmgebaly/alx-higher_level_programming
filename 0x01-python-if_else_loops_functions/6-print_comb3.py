@@ -6,4 +6,3 @@ for dig1 in range(0, 10):
             print("{}{}".format(dig1, dig2))
         else:
             print("{}{}".format(dig1, dig2), end=", ")
-
