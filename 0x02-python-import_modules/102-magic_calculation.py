@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def magic_calculation(a, b):
-    #for matching the bytecode which provided by holberton school
+    # for matching the bytecode which provided by holberton school
 
     from magic_calculation_102 import add, sub
 

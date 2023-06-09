@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
 
-    #print the variable value from variable_load_5
+    # print the variable value from variable_load_5
 
     from variable_load_5 import a
 
