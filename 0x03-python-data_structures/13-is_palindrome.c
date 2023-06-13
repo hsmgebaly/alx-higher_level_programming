@@ -1,3 +1,8 @@
+/*
+ * File no.: 13-is_palindrome.c
+ * Auth: Haytham El-Gebaly
+ */
+
 #include "lists.h"
 
 
