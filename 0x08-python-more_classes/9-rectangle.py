@@ -3,24 +3,24 @@
 
 
 class Rectangle:
-    """Create a rectangle.
+#    """Create a rectangle.
 
-    Attr as following:
-        number_of_instances (int): How many Rectangle instances there are.
-        print_symbol (any): The representational symbol for strings.
+ #   Attr as following:
+  #      number_of_instances (int): How many Rectangle instances there are.
+   #     print_symbol (any): The representational symbol for strings.
 
-    """
+    #"""
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-	"""Init a new Rectangle from scratch.
+#	"""Init a new Rectangle from scratch.
 
-        Arguments will be as following:
-            width (int): the new rectangle's width.
-            height (int): the new rectangle's height.
-        """
+ #       Arguments will be as following:
+  #          width (int): the new rectangle's width.
+   #         height (int): the new rectangle's height.
+    #    """
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
@@ -63,14 +63,14 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Return the Rectangle with the largest area.
+      #  """Return the Rectangle with the largest area.
 
-        Arguments will be as following:
-            rect_1 (Rectangle): For the 1st Rectangle.
-            rect_2 (Rectangle): For the 2nd Rectangle.
-        Raises:
-            TypeError: if neither of the rects [rect_1] nor [rect_2] is a 				rectangle.
-        """
+     #   Arguments will be as following:
+       #     rect_1 (Rectangle): For the 1st Rectangle.
+        #    rect_2 (Rectangle): For the 2nd Rectangle.
+       # Raises:
+        #    TypeError: if neither of the rects [rect_1] nor [rect_2] is a 				rectangle.
+       # """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
@@ -81,18 +81,18 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Return a new Rectangle that has the same width and height as size.
+        #"""Return a new Rectangle that has the same width and height as size.
 
-        Arguments will be as following:
-            size (int): The new Rectangle's width and height.
-        """
+        #Arguments will be as following:
+        #    size (int): The new Rectangle's width and height.
+       # """
         return (cls(size, size))
 
     def __str__(self):
-	"""Return the Rectangle's printable representation.
+#	"""Return the Rectangle's printable representation.
 
-	uses the character # to symbolise the rectangle.
-        """
+#	uses the character # to symbolise the rectangle.
+       # """
         if self.__width == 0 or self.__height == 0:
             return ("")
 
