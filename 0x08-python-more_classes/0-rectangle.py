@@ -3,5 +3,5 @@
 
 
 class Rectangle:
-    # Create a rectangle
+    """Create a rectangle"""
     pass
