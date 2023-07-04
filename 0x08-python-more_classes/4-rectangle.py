@@ -6,12 +6,7 @@ class Rectangle:
 #Create a rectangle.
 
     def __init__(self, width=0, height=0):
-	"""Init a new Rectangle from scratch.
 
-        Arguments will be as following:
-            width (int): the new rectangle's width.
-            height (int): the new rectangle's height.
-        """
         self.width = width
         self.height = height
 
@@ -52,10 +47,8 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-	"""Return the Rectangle's printable representation.
-
-	uses the character # to symbolise the rectangle.
-        """
+#Return the Rectangle's printable representation.
+#uses the character # to symbolise the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
