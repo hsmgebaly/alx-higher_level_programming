@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-#defines a class for rectangles.
+# defines a class for rectangles.
 
 
 class Rectangle:
-#Create a rectangle.
+    # Create a rectangle.
 
     def __init__(self, width=0, height=0):
         """Init a new Rectangle From scratch.
