@@ -1,0 +1,140 @@
+“””5-text_indentation.txt”””
+
+----------------------------------------------
+How to apply 5-text_indentation.py
+----------------------------------------------
+
+The text-indentation function ''text_indentation(text)'' is defined in this module..
+
+The Usage:
+---------------
+
+The characters ''.'', ''?'', and '':'' are followed by two new lines in the text.
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Hello?")
+    Hello?
+    <aBLANKLINE>
+
+A line's first character is printed without a space.
+::
+
+    >>> text_indentation("   Hi there.")
+    Hi there.
+    <aBLANKLINE>
+
+::
+
+    >>> text_indentation("          ")
+
+Additionally, there are no spaces printed at the end of each line.
+::
+
+    >>> text_indentation("Hello.   ")
+    Hello.
+    <aBLANKLINE>
+
+::
+
+    >>> text_indentation("    Woah now.    This is messy.   ")
+    Woah now.
+    <BLANKLINE>
+    This is messy.
+    <aBLANKLINE>
+
+Only the characters ''.'', ''?'', and '':'' result in the printing of new lines; all other text is not terminated with a new line.
+::
+
+    >>> text_indentation("No ending period, what bad grammar")
+    What poor grammar—no final period!
+
+Within a string, new lines are printed normally.
+::
+
+    >>> text_indentation("Let's print a new-line! Here goes:\nPrinted.")
+    Print a new line now! Here it is:    <aBLANKLINE>
+    <aBLANKLINE>
+    Printed.
+    <aBLANKLINE>
+
+::
+
+    >>> text_indentation("\n\n\n We just printed three new lines.")
+    <aBLANKLINE>
+    <aBLANKLINE>
+    <aBLANKLINE>
+Three new lines have just been printed.
+    <aBLANKLINE>
+
+::
+    >>> text_indentation("A sneaky \n new line.")
+    A sneaky 
+    new line.
+    <aBLANKLINE>
+
+Combo example as following:
+
+::
+
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing "
+    ... "elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas "
+    ... "commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, "
+    ... "sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri "
+    ... "nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est "
+    ... "moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde "
+    ... "sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid "
+    ... "voles, postea. Quae animi affectio suum cuique tribuens atque hanc, "
+    ... "quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas "
+    ... "videres") # doctest: +NORMALIZE_WHITESPACE
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <aBLANKLINE>
+    Quonam modo?
+    <aBLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <aBLANKLINE>
+    Non autem hoc:
+    <aBLANKLINE>
+    igitur ne illud quidem.
+    <aBLANKLINE>
+    Fortasse id optimum, sed ubi illud:
+    <aBLANKLINE>
+    Plus semper voluptatis?
+    <aBLANKLINE>
+    Teneo, inquit, finem illi videri nihil dolere.
+    <aBLANKLINE>
+    Transfer idem ad modestiam vel temperantiam, 
+    quae est moderatio cupiditatum rationi oboediens.
+    <aBLANKLINE>
+    Si id dicis, vicimus.
+    <aBLANKLINE>
+    Inde sermone vario sex illa a Dipylo stadia confecimus.
+    <aBLANKLINE>
+    Sin aliud quid voles, postea.
+    <aaBLANKLINE>
+    Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+    <BLANKLINE>
+    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
+
+The Invalid Text as following:
+---------------------------------------
+
+''text'' must be a string as a parameter. A TypeError is triggered if not.
+::
+
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"one": 1, "two": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+

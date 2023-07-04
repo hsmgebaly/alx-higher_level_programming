@@ -1,0 +1,148 @@
+“””2-matrix_divided.txt”””
+
+-------------------------------------------------
+How to apply 2-matrix_divided.py
+-------------------------------------------------
+
+''matrix_divided(matrix, div)'' is a matrix division function defined in this module.
+
+The usage steps:
+-----------------------
+
+The function ''matrix_divided(...)'' creates a new matrix that is a copy of the parameter ''matrix'' with all entries divided by ''div''.
+::
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [
+    ...     [3, 6, 9],
+    ...     [12, 15, 18]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+The maximum number of decimal places for quotients is two.
+::
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+The initial matrix remains the same.
+::
+
+    >>> print(matrix)
+    [[1, 2, 3], [4, 5, 6]]
+
+Floating-point numbers can also be handled by the function.
+::
+
+    >>> matrix = [
+    ...     [1.1, -2.2, 3.3],
+    ...     [4.4, 5.5, -6.6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.37, -0.73, 1.1], [1.47, 1.83, -2.2]]
+
+You can mix floating and integers.
+::
+
+    >>> matrix = [
+    ...     [1, -2.2, 3, 4.4, 5],
+    ...     [-6.6, 7.00, 8, 9.999, 10]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
+
+Unreliable Matrix
+------------------------
+
+''matrix'' requires a list of lists with either ints or floats as its first element. A TypeError is thrown if ''matrix'' is not a list.
+::
+
+    >>> matrix = "not a list"
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be an integer/float matrix (list of lists).
+
+::
+
+    >>> matrix = None
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be an integer/float matrix (list of lists).
+
+The TypeError will be raised if the list is empty.
+::
+
+    >>> matrix = []
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be an integer/float matrix (list of lists).
+
+But a list of empty lists will prevail.
+::
+
+    >>> matrix = [[]]
+    >>> print(matrix_divided(matrix, 3))
+    [[]]
+
+If ''matrix'' is not exactly a list of lists, an equivalent TypeError is raised.
+::
+
+    >>> matrix = [1, 2, 3]
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be an integer/float matrix (list of lists).
+
+In the event that any elements of "matrix" are neither ints nor floats, the same TypeError is triggered once more.
+::
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, "not a number", 6]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: matrix must be an integer/float matrix (list of lists).
+
+The rows in "matrix" must all be the same size, as a final requirement. A new TypeError is produced if any rows have varying widths.
+::
+
+    >>> matrix = [
+    ...     [1, 2, 3, 4],
+    ...     [5, 6, 7]
+    ... ]
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    TypeError: The matrix's rows must all be the same size.
+
+The Invalid Divisors
+------------------------
+
+Either an int or a float must be used for the argument ''div''. A TypeError is triggered if not.
+::
+
+    >>> matrix = [
+    ...     [1, 2, 3],
+    ...     [4, 5, 6]
+    ... ]
+    >>> print(matrix_divided(matrix, "not a number"))
+    Traceback (most recent call last):
+    TypeError: div needs to be a number.
+
+::
+
+    >>> print(matrix_divided(matrix, None))
+    Traceback (most recent call last):
+    TypeError: div needs to be a number.
+
+Additionally, 'div' must not be zero. If not, a ZeroDivisionError is thrown.
+::
+
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last):
+    ZeroDivisionError: dividing by 0
+
