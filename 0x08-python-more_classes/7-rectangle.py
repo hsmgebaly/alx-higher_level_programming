@@ -3,22 +3,20 @@
 
 
 class Rectangle:
-    """Create a rectangle.
+#Create a rectangle.
 
-    Attr as following:
-        number_of_instances (int): How many Rectangle instances there are.
-    """
+   # Attr as following:
+        #number_of_instances (int): How many Rectangle instances there are.
 
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
-	"""Init a new Rectangle from scratch.
+	#Init a new Rectangle from scratch.
 
-        Arguments will be as following:
-            width (int): the new rectangle's width.
-            height (int): the new rectangle's height.
-        """
+        #Arguments will be as following:
+           # width (int): the new rectangle's width.
+            #height (int): the new rectangle's height.
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
@@ -60,10 +58,10 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-	"""Return the Rectangle's printable representation.
+	#Return the Rectangle's printable representation.
 
-	uses the character # to symbolise the rectangle.
-        """
+	#uses the character # to symbolise the rectangle.
+        #"""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
