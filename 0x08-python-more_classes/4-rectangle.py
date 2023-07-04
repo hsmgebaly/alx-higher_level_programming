@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-#Defines a class for Rectangle.
+"""Defines a class for Rectangle."""
 
 
 class Rectangle:
-#Create a rectangle.
+    """Create a rectangle."""
 
     def __init__(self, width=0, height=0):
 
@@ -12,7 +12,7 @@ class Rectangle:
 
     @property
     def width(self):
-#Get/set the Rectangle's width.
+        # Get/set the Rectangle's width.
         return self.__width
 
     @width.setter
@@ -25,7 +25,7 @@ class Rectangle:
 
     @property
     def height(self):
-#Get/set the Rectangle's height.
+        # Get/set the Rectangle's height.
         return self.__height
 
     @height.setter
@@ -37,18 +37,18 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-#Return the Rectangle's area.
+        # Return the Rectangle's area.
         return (self.__width * self.__height)
 
     def perimeter(self):
-#Return the Rectangle's perimeter.
+        # Return the Rectangle's perimeter.
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-#Return the Rectangle's printable representation.
-#uses the character # to symbolise the rectangle."""
+        """Return the Rectangle's printable representation.
+        uses the character # to symbolise the rectangle."""
         if self.__width == 0 or self.__height == 0:
             return ("")
 
@@ -60,7 +60,7 @@ class Rectangle:
         return ("".join(rect))
 
     def __repr__(self):
-#Return the Rectangle's string representation.
+        # Return the Rectangle's string representation.
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
