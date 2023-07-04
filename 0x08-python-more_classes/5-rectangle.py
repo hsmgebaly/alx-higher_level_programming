@@ -10,7 +10,6 @@ class Rectangle:
         Arguments will be as following:
         width (int): the new rectangle's width.
         height (int): the new rectangle's height."""
-
         self.width = width
         self.height = height
 
@@ -52,9 +51,7 @@ class Rectangle:
 
     def __str__(self):
         """Return the Rectangle's printable representation.
-
-    uses the character # to symbolise the rectangle.
-    """
+        uses the character # to symbolise the rectangle."""
     if self.__width == 0 or self.__height == 0:
         return ("")
     rect = []
