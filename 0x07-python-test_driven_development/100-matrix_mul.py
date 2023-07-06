@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# establishes the matrix multiplication function.
 
 def matrix_mul(m_a, m_b):
     """ Divide two matrices by two.
