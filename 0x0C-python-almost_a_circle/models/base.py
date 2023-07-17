@@ -45,8 +45,8 @@ class Base:
         """A list of items should be serialised in JSON and written to a file.
 
         Arguments as following:
-            list_objs (list): A list of of Base instances
-		that have been inherited.
+        list_objs (list): A list of of Base instances
+            that have been inherited.
         """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
@@ -76,7 +76,7 @@ class Base:
 
         Arguments as following:
             **dictionary (dict): Attribute key/value
-		pairs that need to be initialised.
+            pairs that need to be initialised.
         """
         if dictionary and dictionary != {}:
             if cls.__name__ == "Rectangle":
@@ -89,7 +89,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """Return the list of classes that were created
-		from a JSON string database.
+        from a JSON string database.
 
         Reads from `<cls.__name__>.json`.
 
@@ -110,7 +110,7 @@ class Base:
         """Create a file and serialise a list of items in CSV format.
 
         Args:
-            list_objs (list): A list of Base instances that have been inherited.
+        list_objs (list): A list of Base instances that have been inherited.
         """
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csvfile:
